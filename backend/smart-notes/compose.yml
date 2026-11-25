@@ -1,0 +1,21 @@
+services:
+  database:
+    image: mysql:9.6
+    environment:
+      MYSQL_DATABASE: projeto
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: notes
+      MYSQL_PASSWORD: notes
+    ports:
+      - "3307:3306"
+    volumes:
+      - projeto_notes:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-unotes", "-pnotes"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+    projeto_notes:
+

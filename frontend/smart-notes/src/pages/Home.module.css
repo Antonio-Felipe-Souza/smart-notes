@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 73px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.home > div {
+  width: 100%;
+  max-width: 650px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 0 auto 1.5rem;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.result h2 {
+    margin-bottom: 1rem;
+}
+
+.result p {
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
