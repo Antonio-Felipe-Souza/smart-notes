@@ -5,7 +5,7 @@ export async function processAudio(audio, name) {
 
     formData.append('file', audio, name)
 
-    const response = await fetch(`${API_URL}/STT`, {
+    const response = await fetch(`${API_URL}/notes`, {
         method: 'POST',
         body: formData,
     })

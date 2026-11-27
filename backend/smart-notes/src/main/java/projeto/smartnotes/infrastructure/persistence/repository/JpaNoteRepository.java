@@ -39,6 +39,11 @@ public class JpaNoteRepository implements NoteRepository {
     }
 
     @Override
+    public List<NoteCategory> findAllCategories() {
+        return noteEntityRepository.findDistinctCategories();
+    }
+
+    @Override
     public List<Note> findAllByCategory(NoteCategory noteCategory) {
         var entitiesByCategory = noteEntityRepository.findAllByNoteCategory(noteCategory);
 
